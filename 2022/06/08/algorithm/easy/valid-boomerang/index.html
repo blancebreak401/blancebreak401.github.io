@@ -16,21 +16,23 @@
   <meta name="author" content="Five_km">
   <meta name="keywords" content="">
   
-    <meta name="description" content="俺滴第一篇文章o(￣▽￣)ブ千呼万唤始出来，终于是把这个玩意整好了，不得不说这一套框架是很强的，本来是打算自己开发一套的，到设计表结构的时候，发现没这么简单。。。于是就发现了这个宝藏框架，研究了一下，真的厉害👍               果然我还是太菜了╥﹏╥…              那我们一起加油叭(ง •_•)ง">
+    <meta name="description" content="题目             [1037. 有效的回旋镖]             给定一个数组 points，其中 points[i] &#x3D; [xi, yi]表示 X-Y 平面上的一个点，如果这些点构成一个 回旋镖 则返回 true。 回旋镖 定义为一组三个点，这些点 各不相同 且 不在一条直线上 。 示例 1： 12输入：points &#x3D; [[1,1],[2,3],[3,2]]输出：true">
 <meta property="og:type" content="article">
-<meta property="og:title" content="俺滴第一篇文章">
-<meta property="og:url" content="https://blancebreak401.github.io/2022/06/03/other/firstArticle/index.html">
+<meta property="og:title" content="1037·有效的回旋镖">
+<meta property="og:url" content="https://blancebreak401.github.io/2022/06/08/algorithm/easy/valid-boomerang/index.html">
 <meta property="og:site_name" content="拜托 我超菜的">
-<meta property="og:description" content="俺滴第一篇文章o(￣▽￣)ブ千呼万唤始出来，终于是把这个玩意整好了，不得不说这一套框架是很强的，本来是打算自己开发一套的，到设计表结构的时候，发现没这么简单。。。于是就发现了这个宝藏框架，研究了一下，真的厉害👍               果然我还是太菜了╥﹏╥…              那我们一起加油叭(ง •_•)ง">
+<meta property="og:description" content="题目             [1037. 有效的回旋镖]             给定一个数组 points，其中 points[i] &#x3D; [xi, yi]表示 X-Y 平面上的一个点，如果这些点构成一个 回旋镖 则返回 true。 回旋镖 定义为一组三个点，这些点 各不相同 且 不在一条直线上 。 示例 1： 12输入：points &#x3D; [[1,1],[2,3],[3,2]]输出：true">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-03T04:43:00.000Z">
-<meta property="article:modified_time" content="2022-06-03T08:34:50.629Z">
+<meta property="article:published_time" content="2022-06-08T14:11:48.000Z">
+<meta property="article:modified_time" content="2022-06-08T14:25:09.781Z">
 <meta property="article:author" content="Five_km">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="计算机几何">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>俺滴第一篇文章 - 拜托 我超菜的</title>
+  <title>1037·有效的回旋镖 - 拜托 我超菜的</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -193,7 +195,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="俺滴第一篇文章"></span>
+            <span id="subtitle" data-typed-text="1037·有效的回旋镖"></span>
           
         </div>
 
@@ -204,8 +206,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-03 12:43" pubdate>
-          2022年6月3日 下午
+        <time datetime="2022-06-08 22:11" pubdate>
+          2022年6月8日 晚上
         </time>
       </span>
     
@@ -216,7 +218,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          133 字
+          803 字
         
       </span>
     
@@ -227,7 +229,7 @@
         
         
         
-          2 分钟
+          7 分钟
         
       </span>
     
@@ -265,18 +267,38 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">俺滴第一篇文章</h1>
+            <h1 style="display: none">1037·有效的回旋镖</h1>
             
             <div class="markdown-body">
               
-              <h1 id="俺滴第一篇文章o-￣▽￣-ブ"><a href="#俺滴第一篇文章o-￣▽￣-ブ" class="headerlink" title="俺滴第一篇文章o(￣▽￣)ブ"></a>俺滴第一篇文章o(<em>￣▽￣</em>)ブ</h1><p>千呼万唤始出来，终于是把这个玩意整好了，不得不说这一套框架是很强的，本来是打算自己开发一套的，到设计表结构的时候，发现没这么简单。。。于是就发现了这个宝藏框架，研究了一下，真的厉害👍 </p>
-<div class="note note-light">
-            <p>果然我还是太菜了╥﹏╥…</p>
+              <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><div class="note note-success">
+            <p>[<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-boomerang/">1037. 有效的回旋镖</a>]</p>
           </div>
 
+<p>给定一个数组 <code>points</code>，其中 <code>points[i] = [xi, yi]</code>表示 <strong>X-Y</strong> 平面上的一个点，如果这些点构成一个 回旋镖 则返回 <code>true</code>。</p>
+<p><strong>回旋镖</strong> 定义为一组三个点，这些点 <strong>各不相同</strong> 且 不在一条直线上 。</p>
+<p>示例 1：</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs lua">输入：points = <span class="hljs-string">[[1,1],[2,3],[3,2]]</span><br>输出：<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 
-<p>那我们一起加油叭(ง •_•)ง</p>
+<p>示例 2：</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs lua">输入：points = <span class="hljs-string">[[1,1],[2,2],[3,3]]</span><br>输出：<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
+<p>提示：</p>
+<ul>
+<li><code>points.length == 3</code></li>
+<li><code>points[i].length == 2</code></li>
+<li><code>0 &lt;= xi, yi &lt;= 100</code></li>
+</ul>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>计算机几何</p>
+<p>根据题意可将题目转换为 判断这三个点是否位于同一条直线上。</p>
+<p>在坐标系中，两点（坐标）可确定一线，三个坐标即两条直线，即判断两条直线是否为同一条即可。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hk/%E6%96%9C%E7%8E%87">(￢‸￢) ?【斜率】</a></p>
+</blockquote>
+<p>判断直线是否为同一条可使用<strong>斜率</strong>，即<br>$$<br>k = tan\ \alpha = \Delta\frac {  y } {  x } = \frac{y_2 - y_1}{x_2-x_1}<br>$$<br>当两条直线重叠时（斜率相同）则有<br>$$<br>\frac{y_a - y_b}{x_a-x_b} = \frac{y_c - y_d}{x_c-x_d}<br>$$<br>带入题中可得<br>$$<br>\frac{y_1 - y_0}{x_1-x_0} = \frac{y_2 - y_1}{x_2-x_1}<br>$$<br>化简后可得<br>$$<br>(y_1-y_0)(x_2-x_1) = (y_2-y_1)(x_1-x_0)<br>$$</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isBoomerang</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] points)</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">k1</span> <span class="hljs-operator">=</span> (points[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>] - points[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>]) * (points[<span class="hljs-number">2</span>][<span class="hljs-number">0</span>] - points[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]),<br>    k2 = (points[<span class="hljs-number">2</span>][<span class="hljs-number">1</span>] - points[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]) * (points[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>] - points[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]);<br>    <span class="hljs-keyword">return</span> k1 != k2;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="时空复杂度"><a href="#时空复杂度" class="headerlink" title="时空复杂度"></a>时空复杂度</h3><h4 id="时间复杂度：O-n"><a href="#时间复杂度：O-n" class="headerlink" title="时间复杂度：O(n)"></a>时间复杂度：O(n)</h4><h4 id="空间复杂度：O-n"><a href="#空间复杂度：O-n" class="headerlink" title="空间复杂度：O(n)"></a>空间复杂度：O(n)</h4>
               
             </div>
             <hr/>
@@ -293,8 +315,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%95%A5/" class="category-chain-item">略</a>
+  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AE%97%E6%B3%95/%E7%AE%80%E5%8D%95/" class="category-chain-item">简单</a>
+  
+  
+
   
 
       </span>
@@ -305,6 +334,15 @@
     </div>
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%B0%E5%AD%A6/">#数学</a>
+      
+        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%87%A0%E4%BD%95/">#计算机几何</a>
+      
+    </div>
+  
 </div>
 
 
@@ -313,8 +351,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>俺滴第一篇文章</div>
-      <div>https://blancebreak401.github.io/2022/06/03/other/firstArticle/</div>
+      <div>1037·有效的回旋镖</div>
+      <div>https://blancebreak401.github.io/2022/06/08/algorithm/easy/valid-boomerang/</div>
     </div>
     <div class="license-meta">
       
@@ -326,7 +364,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年6月3日</div>
+          <div>2022年6月8日</div>
         </div>
       
       
@@ -356,15 +394,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/05/algorithm/easy/min-max-game/" title="6090·极大极小游戏">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">6090·极大极小游戏</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/06/05/algorithm/easy/min-max-game/" title="6090·极大极小游戏">
+                        <span class="hidden-mobile">6090·极大极小游戏</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
