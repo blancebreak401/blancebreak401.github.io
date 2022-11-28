@@ -16,23 +16,23 @@
   <meta name="author" content="XY:me">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目             [1037. 有效的回旋镖]             给定一个数组 points，其中 points[i] &#x3D; [xi, yi]表示 X-Y 平面上的一个点，如果这些点构成一个 回旋镖 则返回 true。 回旋镖 定义为一组三个点，这些点 各不相同 且 不在一条直线上 。 示例1:  输入：points &#x3D; [[1,1],[2,3],[3,2]]输出：tru">
+    <meta name="description" content="题目             [1758. 生成交替二进制字符串的最少操作数]             给你一个仅由字符 &#39;0&#39; 和 &#39;1&#39; 组成的字符串 s 。一步操作中，你可以将任一 &#39;0&#39; 变成 &#39;1&#39; ，或者将 &#39;1&#39; 变成 &#39;0&#39; 。 交替字符串 定义为：如果字符串中不存在相邻两个字符相等的情">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LC1037·有效的回旋镖">
-<meta property="og:url" content="https://blancebreak401.github.io/2022/06/08/algorithm/easy/valid-boomerang/index.html">
+<meta property="og:title" content="LC1758·生成交替二进制字符串的最少操作数">
+<meta property="og:url" content="https://blancebreak401.github.io/2022/11/29/algorithm/easy/minimum-changes-to-make-alternating-binary-string/index.html">
 <meta property="og:site_name" content="拜托我超菜的">
-<meta property="og:description" content="题目             [1037. 有效的回旋镖]             给定一个数组 points，其中 points[i] &#x3D; [xi, yi]表示 X-Y 平面上的一个点，如果这些点构成一个 回旋镖 则返回 true。 回旋镖 定义为一组三个点，这些点 各不相同 且 不在一条直线上 。 示例1:  输入：points &#x3D; [[1,1],[2,3],[3,2]]输出：tru">
+<meta property="og:description" content="题目             [1758. 生成交替二进制字符串的最少操作数]             给你一个仅由字符 &#39;0&#39; 和 &#39;1&#39; 组成的字符串 s 。一步操作中，你可以将任一 &#39;0&#39; 变成 &#39;1&#39; ，或者将 &#39;1&#39; 变成 &#39;0&#39; 。 交替字符串 定义为：如果字符串中不存在相邻两个字符相等的情">
 <meta property="og:locale">
-<meta property="article:published_time" content="2022-06-08T04:25:11.000Z">
-<meta property="article:modified_time" content="2022-11-28T20:30:41.625Z">
+<meta property="article:published_time" content="2022-11-28T20:11:52.000Z">
+<meta property="article:modified_time" content="2022-11-28T20:33:04.106Z">
 <meta property="article:author" content="XY:me">
 <meta property="article:tag" content="数学">
-<meta property="article:tag" content="计算机几何">
+<meta property="article:tag" content="位运算">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>LC1037·有效的回旋镖 - 拜托我超菜的</title>
+  <title>LC1758·生成交替二进制字符串的最少操作数 - 拜托我超菜的</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -211,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="LC1037·有效的回旋镖"></span>
+            <span id="subtitle" data-typed-text="LC1758·生成交替二进制字符串的最少操作数"></span>
           
         </div>
 
@@ -222,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-08 12:25" pubdate>
-          June 8, 2022 pm
+        <time datetime="2022-11-29 04:11" pubdate>
+          November 29, 2022 am
         </time>
       </span>
     
@@ -234,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          822 字
+          983 字
         
       </span>
     
@@ -245,7 +245,7 @@
         
         
         
-          7 分钟
+          9 分钟
         
       </span>
     
@@ -283,46 +283,69 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">LC1037·有效的回旋镖</h1>
+            <h1 style="display: none">LC1758·生成交替二进制字符串的最少操作数</h1>
             
             
               <div class="markdown-body">
                 
                 <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><div class="note note-success">
-            <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-boomerang/">[1037. 有效的回旋镖]</a></p>
+            <p>[<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-changes-to-make-alternating-binary-string/">1758. 生成交替二进制字符串的最少操作数</a>]</p>
           </div>
 
-<p>给定一个数组 <code>points</code>，其中 <code>points[i] = [xi, yi]</code>表示 <code>X-Y</code> 平面上的一个点，如果这些点构成一个 回旋镖 则返回 <code>true</code>。</p>
-<p>回旋镖 定义为一组三个点，这些点 各不相同 且 不在一条直线上 。</p>
-<p>示例1:</p>
+<p>给你一个仅由字符 <code>&#39;0&#39;</code> 和 <code>&#39;1&#39;</code> 组成的字符串 <code>s</code> 。一步操作中，你可以将任一 <code>&#39;0&#39;</code> 变成 <code>&#39;1&#39;</code> ，或者将 <code>&#39;1&#39;</code> 变成 <code>&#39;0&#39;</code> 。</p>
+<p>交替字符串 定义为：如果字符串中不存在相邻两个字符相等的情况，那么该字符串就是交替字符串。例如，字符串 “010” 是交替字符串，而字符串 “0100” 不是。</p>
+<p>返回使 s 变成 交替字符串 所需的 最少 操作数。</p>
+<p>示例 1：</p>
 <blockquote>
-<p><strong>输入：</strong>points &#x3D; [[1,1],[2,3],[3,2]]<br><strong>输出：</strong>true</p>
+<p><strong>输入：</strong>s &#x3D; “0100”<br><strong>输出：</strong>1<br><strong>解释：</strong>如果将最后一个字符变为 ‘1’ ，s 就变成 “0101” ，即符合交替字符串定义。</p>
 </blockquote>
-<p>示例2：</p>
+<p>示例 2：</p>
 <blockquote>
-<p><strong>输入：</strong>points &#x3D; [[1,1],[2,2],[3,3]]<br><strong>输出：</strong>false</p>
+<p><strong>输入：</strong>s &#x3D; “10”<br><strong>输出：</strong>0<br><strong>解释：</strong>s 已经是交替字符串。</p>
+</blockquote>
+<p>示例 3：</p>
+<blockquote>
+<p><strong>输入：</strong>s &#x3D; “1111”<br><strong>输出：</strong>2<br><strong>解释：</strong>需要 2 步操作得到 “0101” 或 “1010” 。</p>
 </blockquote>
 <p>提示：</p>
 <ul>
-<li><code>points.length == 3</code></li>
-<li><code>points[i].length == 2</code></li>
-<li><code>0 &lt;= xi, yi &lt;= 100</code></li>
+<li><code>1 &lt;= s.length &lt;= 104</code></li>
+<li><code>s[i]</code> 是 <code>&#39;0&#39;</code> 或 <code>&#39;1&#39;</code></li>
 </ul>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><h2 id="数学（计算机几何）"><a href="#数学（计算机几何）" class="headerlink" title="数学（计算机几何）"></a>数学（计算机几何）</h2><p>根据题意，当指针为奇数时取最大值、指针为偶数时间取最小值</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://zh.m.wikipedia.org/zh-hk/%E6%96%9C%E7%8E%87">(￢‸￢) ?【斜率】</a></p>
-</blockquote>
-<p>判断直线是否为同一条可使用斜率，即<br>$$<br>k &#x3D; \operatorname { tan } \alpha &#x3D; \Delta \frac { y } { x }<br>$$<br>当两条直线重叠时（斜率相同）则有<br>$$<br>frac { y _ { a } - y _ { b } } { x _ { a } - x _ { b } } &#x3D; \frac { y _ { c } - y _ { b } } { x _ { c } - x _ { b } }<br>$$</p>
-<p>带入题中可得<br>$$<br>\frac { y _ { 1 } - y _ { 0 } } { x _ { 1 } - x _ { 0 } } &#x3D; \frac { y _ { 2 } - y _ { 1 } } { x _ { 2 } - x _ { 1 } }<br>$$<br>化简后可得<br>$$<br>( y _ { 1 } - y _ { 0 } ) ( x _ { 2 } - x _ { 1 } ) &#x3D; ( y _ { 2 } - y _ { 1 } ) ( x _ { 1 } - x _ { 0 } )<br>$$</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isBoomerang</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> points<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">int</span> k1 <span class="token operator">=</span> <span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    k2 <span class="token operator">=</span> <span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> k1 <span class="token operator">!=</span> k2<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><h2 id="数学（奇偶性）"><a href="#数学（奇偶性）" class="headerlink" title="数学（奇偶性）"></a>数学（奇偶性）</h2><p>题意得知必须保证奇数位与偶数位互异，所以只需要统计互异的次数可得到一种解。</p>
+<p>题目要求最小解，则使用字符串长度减去其一解得到另一解，返回最小值即可。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">minOperations</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">char</span> c <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token char">'0'</span><span class="token punctuation">)</span> count<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token char">'1'</span><span class="token punctuation">)</span> count<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>len <span class="token operator">-</span> count<span class="token punctuation">,</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
-<h3 id="时空复杂度"><a href="#时空复杂度" class="headerlink" title="时空复杂度"></a>时空复杂度</h3><ul>
-<li>时间： O(n)</li>
-<li>空间： O(n)</li>
+<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><ul>
+<li><p>时间 O(n)</p>
+</li>
+<li><p>空间 O(1)</p>
+</li>
+</ul>
+<h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><p>题意得知每一位必须互异，则构造出该模板答案进行匹配即可</p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure><div class="code-wrapper"><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">minOperations</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> a <span class="token operator">+=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">^</span> <span class="token char">'0'</span> <span class="token operator">^</span> <span class="token punctuation">(</span>i <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//动态构造0开头的互异字符串</span>
+    <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> len <span class="token operator">-</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="复杂度-1"><a href="#复杂度-1" class="headerlink" title="复杂度"></a>复杂度</h3><ul>
+<li><p>时间O(n)</p>
+</li>
+<li><p>空间 O(n)</p>
+</li>
 </ul>
 <blockquote>
 <h1 id="以上"><a href="#以上" class="headerlink" title="以上"></a>以上</h1></blockquote>
@@ -368,7 +391,7 @@
       
         <a href="/tags/%E6%95%B0%E5%AD%A6/">#数学</a>
       
-        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%87%A0%E4%BD%95/">#计算机几何</a>
+        <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">#位运算</a>
       
     </div>
   
@@ -380,8 +403,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>LC1037·有效的回旋镖</div>
-      <div>https://blancebreak401.github.io/2022/06/08/algorithm/easy/valid-boomerang/</div>
+      <div>LC1758·生成交替二进制字符串的最少操作数</div>
+      <div>https://blancebreak401.github.io/2022/11/29/algorithm/easy/minimum-changes-to-make-alternating-binary-string/</div>
     </div>
     <div class="license-meta">
       
@@ -393,7 +416,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>June 8, 2022</div>
+          <div>November 29, 2022</div>
         </div>
       
       
@@ -425,18 +448,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/11/29/algorithm/easy/minimum-cost-to-move-chips-to-the-same-position/" title="LC1217. 玩筹码">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">LC1217. 玩筹码</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/05/algorithm/easy/min-max-game/" title="LC6090·极大极小游戏">
-                        <span class="hidden-mobile">LC6090·极大极小游戏</span>
+                      <a href="/2022/11/29/algorithm/easy/minimum-cost-to-move-chips-to-the-same-position/" title="LC1217. 玩筹码">
+                        <span class="hidden-mobile">LC1217. 玩筹码</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -490,12 +507,6 @@
 
 
   
-
-
-  
-  
-
-
 
 
 
@@ -691,49 +702,6 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
