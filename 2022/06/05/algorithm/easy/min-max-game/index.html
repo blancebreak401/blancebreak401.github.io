@@ -16,15 +16,15 @@
   <meta name="author" content="XY:me">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目             6090·极大极小游戏              给你一个下标从 0 开始的整数数组 nums ，其长度是 2 的幂。 对 nums 执行下述算法：  设 n 等于 nums 的长度，如果 n &#x3D;&#x3D; 1 ，终止 算法过程。否则，创建 一个新的整数数组 newNums ，新数组长度为 n &#x2F; 2 ，下标从 0 开始。 对于满足 0 &lt;">
+    <meta name="description" content="题目             6090. 极大极小游戏              给你一个下标从 0 开始的整数数组 nums ，其长度是 2 的幂。 对 nums 执行下述算法：  设 n 等于 nums 的长度，如果 n &#x3D;&#x3D; 1 ，终止 算法过程。否则，创建 一个新的整数数组 newNums ，新数组长度为 n &#x2F; 2 ，下标从 0 开始。 对于满足 0 &amp;lt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LC6090·极大极小游戏">
 <meta property="og:url" content="https://blancebreak401.github.io/2022/06/05/algorithm/easy/min-max-game/index.html">
 <meta property="og:site_name" content="拜托我超菜的">
-<meta property="og:description" content="题目             6090·极大极小游戏              给你一个下标从 0 开始的整数数组 nums ，其长度是 2 的幂。 对 nums 执行下述算法：  设 n 等于 nums 的长度，如果 n &#x3D;&#x3D; 1 ，终止 算法过程。否则，创建 一个新的整数数组 newNums ，新数组长度为 n &#x2F; 2 ，下标从 0 开始。 对于满足 0 &lt;">
+<meta property="og:description" content="题目             6090. 极大极小游戏              给你一个下标从 0 开始的整数数组 nums ，其长度是 2 的幂。 对 nums 执行下述算法：  设 n 等于 nums 的长度，如果 n &#x3D;&#x3D; 1 ，终止 算法过程。否则，创建 一个新的整数数组 newNums ，新数组长度为 n &#x2F; 2 ，下标从 0 开始。 对于满足 0 &amp;lt">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-06-05T11:23:41.000Z">
-<meta property="article:modified_time" content="2022-11-26T11:18:23.743Z">
+<meta property="article:modified_time" content="2022-11-28T17:55:29.246Z">
 <meta property="article:author" content="XY:me">
 <meta property="article:tag" content="递归">
 <meta property="article:tag" content="双指针">
@@ -164,6 +164,18 @@
           
           
             <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友♂链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
                 俺_
@@ -277,7 +289,7 @@
               <div class="markdown-body">
                 
                 <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><div class="note note-success">
-            <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/min-max-game/">6090·极大极小游戏</a></p>
+            <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/min-max-game/">6090. 极大极小游戏</a></p>
           </div>
 
 
@@ -293,11 +305,11 @@
 <p>执行算法后，返回 nums 中剩下的那个数字。</p>
 <p>示例1:</p>
 <blockquote>
-<p>输入：nums &#x3D; [1,3,5,2,4,8,2,2]<br>输出：1<br>解释：重复执行算法会得到下述数组。<br>第一轮：nums &#x3D; [1,5,4,2]<br>第二轮：nums &#x3D; [1,4]<br>第三轮：nums &#x3D; [1]<br>1 是最后剩下的那个数字，返回 1。</p>
+<p><strong>输入：</strong>nums &#x3D; [1,3,5,2,4,8,2,2]<br><strong>输出：</strong>1<br><strong>解释：</strong>重复执行算法会得到下述数组。<br>第一轮：nums &#x3D; [1,5,4,2]<br>第二轮：nums &#x3D; [1,4]<br>第三轮：nums &#x3D; [1]<br>1 是最后剩下的那个数字，返回 1。</p>
 </blockquote>
 <p>示例2：</p>
 <blockquote>
-<p>输入：nums &#x3D; [3]<br>输出：3<br>解释：3 就是最后剩下的数字，返回 3 。</p>
+<p><strong>输入：</strong>nums &#x3D; [3]<br><strong>输出：</strong>3<br><strong>解释：</strong>3 就是最后剩下的数字，返回 3 。</p>
 </blockquote>
 <p>提示：</p>
 <ul>
@@ -305,8 +317,8 @@
 <li><code>1 &lt;= nums[i] &lt;= 109</code></li>
 <li><code>nums.length 是 2 的幂</code></li>
 </ul>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>简单题模拟<br>根据题意，当指针为奇数时取最大值、指针为偶数时间取最小值</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure><div class="code-wrapper"><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> <span class="token function-variable function">minMaxGame</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>根据题意，当指针为奇数时取最大值、指针为偶数时间取最小值</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure><div class="code-wrapper"><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> <span class="token function-variable function">minMaxGame</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">+=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
@@ -324,8 +336,7 @@
     <span class="token keyword">return</span> <span class="token function">minMaxGame</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
 
-<h1 id="时空复杂度"><a href="#时空复杂度" class="headerlink" title="时空复杂度"></a>时空复杂度</h1><p>时间： O(n) n为数组长度<br>空间： O(n)</p>
-<p>实际为n&#x2F;2 + m （n为数组长度，m为调用次数） 即O(n)</p>
+<h3 id="时空复杂度"><a href="#时空复杂度" class="headerlink" title="时空复杂度"></a>时空复杂度</h3><h4 id="时间：-O-n-n为数组长"><a href="#时间：-O-n-n为数组长" class="headerlink" title="时间： O(n) n为数组长"></a>时间： O(n) n为数组长</h4><h4 id="空间：-O-n"><a href="#空间：-O-n" class="headerlink" title="空间： O(n)"></a>空间： O(n)</h4><p>实际为n&#x2F;2 + m （n为数组长度，m为调用次数） 即O(n)</p>
 <blockquote>
 <h1 id="以上"><a href="#以上" class="headerlink" title="以上"></a>以上</h1></blockquote>
 
